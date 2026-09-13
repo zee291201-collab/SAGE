@@ -11,6 +11,7 @@ import operator
 import re
 from dataclasses import dataclass
 from typing import Any, Optional
+NUMBER = r"[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?"
 
 
 @dataclass(frozen=True)
