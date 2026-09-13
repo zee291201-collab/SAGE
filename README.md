@@ -165,4 +165,4 @@ A locally controlled, AI-assisted home factory with SAGE at the center.
 SAGE is still an experiment. The system is incomplete, the hardware doesn't exist yet, and the ultimate goal is ambitious.
 
 That's rather the point.
-Here is Your Guide on how to set it up -->SAGE_SETUP_GUIDE.md
+Here is Your Guide on how to set it up -->[SAGE_SETUP_GUIDE.md](https://github.com/zee291201-collab/SAGE/blob/aec0845b0705500ec46dc43bbe909448b6929afd/SAGE_SETUP_GUIDE.md)
