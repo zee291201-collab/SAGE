@@ -48,7 +48,7 @@ Instead of immediately relying on external services, SAGE first checks its own k
 
 The intended decision process is:
 
-                    USER
+,,,                    USER
                       │
                       ▼
                REQUEST ROUTER
@@ -70,7 +70,7 @@ The intended decision process is:
                              │             │
                              └──────┬──────┘
                                     ▼
-                                  SAGE
+                                  SAGE,,,
 
 This allows SAGE to minimize unnecessary model calls, reduce latency, and retain control over where information comes from.
 
