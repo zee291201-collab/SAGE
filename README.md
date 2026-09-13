@@ -48,30 +48,49 @@ Instead of immediately relying on external services, SAGE first checks its own k
 
 The intended decision process is:
 
-,,,                    USER
-                      │
-                      ▼
-               REQUEST ROUTER
-                      │
-          ┌───────────┴───────────┐
-          ▼                       ▼
-   DETERMINISTIC             INFORMATIONAL
-     FUNCTION                    REQUEST
-          │                       │
-          ▼                       ▼
-       EXECUTE              LOCAL KNOWLEDGE
-                                  │
-                           Useful information?
-                              /          \
-                            YES           NO
-                             │             │
-                             ▼             ▼
-                        AI SYNTHESIS      WEB
-                             │             │
-                             └──────┬──────┘
-                                    ▼
-                                  SAGE,,,
-
+```text
+                         USER
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │  REQUEST ROUTER │
+                  └────────┬────────┘
+                           │
+              ┌────────────┴────────────┐
+              ▼                         ▼
+     ┌─────────────────┐       ┌────────────────────┐
+     │ DETERMINISTIC   │       │ INFORMATIONAL     │
+     │ FUNCTION        │       │ REQUEST            │
+     └────────┬────────┘       └─────────┬──────────┘
+              │                           │
+              ▼                           ▼
+     ┌─────────────────┐       ┌────────────────────┐
+     │     EXECUTE     │       │  LOCAL KNOWLEDGE   │
+     └─────────────────┘       └─────────┬──────────┘
+                                         │
+                                         ▼
+                                ┌────────────────────┐
+                                │ SUFFICIENT INFO?   │
+                                └────────┬───────────┘
+                                      /   \
+                                    YES    NO
+                                    /        \
+                                   ▼          ▼
+                         ┌──────────────┐  ┌──────────┐
+                         │ AI SYNTHESIS │  │   WEB    │
+                         │ Filter       │  └────┬─────┘
+                         │ Combine      │       │
+                         │ Phrase       │       ▼
+                         └──────┬───────┘ ┌──────────────┐
+                                │         │ AI SYNTHESIS │
+                                │         └──────┬───────┘
+                                └────────┬───────┘
+                                         ▼
+                                  ┌─────────────┐
+                                  │    SAGE     │
+                                  │ FINAL REPLY │
+                                  └─────────────┘
+```
 This allows SAGE to minimize unnecessary model calls, reduce latency, and retain control over where information comes from.
 
 External research is intended to function as a fallback rather than the default.
