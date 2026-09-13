@@ -93,7 +93,10 @@ Personality and communication controls
 Multiple AI model support
 Early foundations for future hardware control
 
-The goal is to make SAGE feel less like a chatbot waiting for prompts and more like a system that decides what needs to happen before asking an AI model to think about it.
+The goal is to make SAGE feel less like a chatbot waiting for prompts and more like a system that decides what needs to happen before asking an AI model to think about it. As of Right now SAGE is just a Chat Bot in a terminal
+<img width="1280" height="832" alt="Screenshot 2026-09-13 at 19 10 51" src="https://github.com/user-attachments/assets/46bcd662-e623-410a-bd80-e1e42d0f9352" />
+
+
 
 The Bigger Goal
 
